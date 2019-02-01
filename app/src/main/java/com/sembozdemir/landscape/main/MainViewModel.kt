@@ -9,10 +9,10 @@ class MainViewModel @Inject constructor(
     private val helloProvider: HelloProvider
 ) : BaseViewModel() {
 
-    val helloText: MutableLiveData<String> = MutableLiveData()
+    val helloText: MutableLiveData<String> = MutableLiveData<String>().apply { value = "" }
 
     fun onSayHelloButtonClick() {
-        helloText.value = helloProvider.sayHello()
+        helloText.postValue(helloProvider.sayHello())
     }
 
 }
