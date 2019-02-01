@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Landscape</string>
+    <string name="say_hello">Say Hello</string>
 </resources>
